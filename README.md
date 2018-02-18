@@ -1,7 +1,7 @@
 python-ldap-simple-search
 =========
 
-python-ldap-simple-search is a python library that provides a simple way to performs synchronous LDAP queries. It wraps python-ldap.
+A python library that provides a simple way to performs synchronous LDAP queries. It wraps python-ldap.
 
 ## Install
 
@@ -26,20 +26,20 @@ pip install ldap_simple_search
 
 ### Initial setup
 
-```
+```python
 from ldap_simple_search import LDAPSearch
 
 uri = 'ldap://ldap.internal:389'
 bind_dn = "uid=admin,cn=users,cn=accounts,dc=opensource,dc=org"
 password = "yourpassword"
-base_dn = "cn=users,cn=accounts,dc=linux,dc=org"
+base_dn = "cn=users,cn=accounts,dc=opensource,dc=org"
 search_filter = "(&(mail=admin@opensource.org))
 search_attribute = ['memberOf']
 ```
 
 ### Perform a query
 
-```
+```python
 l = LDAPSearch(uri,bind_dn,password) 
 l.search(base_dn, search_filter, search_attribute)
 ```
@@ -48,20 +48,20 @@ l.search(base_dn, search_filter, search_attribute)
 
 Define a callback:
 
-```
+```python
 def LuvCallBacks(dn,record):
    return dn, record
 ```
 
 Querying with callback to process results on large queries:
 
-```
+```python
 l.search(base_dn, search_filter, search_attribute, LuvCallBacks)
 ```
 
 ## Output format
 
-```
+```python
 # without callback
 
 [('uid=admin,cn=users,cn=accounts,dc=opensource,dc=org',
