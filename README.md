@@ -33,7 +33,7 @@ uri = 'ldap://ldap.internal:389'
 bind_dn = "uid=admin,cn=users,cn=accounts,dc=opensource,dc=org"
 password = "yourpassword"
 base_dn = "cn=users,cn=accounts,dc=opensource,dc=org"
-search_filter = "(&(mail=admin@opensource.org))
+search_filter = "(&(mail=admin@opensource.org))"
 search_attribute = ['memberOf']
 ```
 
@@ -72,5 +72,5 @@ l.search(base_dn, search_filter, search_attribute, LuvCallBacks)
     'person',
     'posixaccount',],
    'uidNumber': ['8228839'],
-  }
+  }]
 ```
