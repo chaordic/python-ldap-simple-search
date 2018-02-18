@@ -40,7 +40,7 @@ search_attribute = ['memberOf']
 ### Perform a query
 
 ```python
-l = LDAPSearch(uri,bind_dn,password) 
+l = LDAPSearch(uri, bind_dn, password) 
 l.search(base_dn, search_filter, search_attribute)
 ```
 
