@@ -74,7 +74,7 @@ class LDAPSearch(object):
         for dn, record in data:
             if dn is not None:
                 if callback is not None:
-                    callback(dn, record)
+                    results.append((callback(dn, record)))
                 else:
                     results.append((dn, record))
 
