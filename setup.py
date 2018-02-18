@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='ldap-simple-search',
-      version='0.1',
+      version='0.1.1',
       description='Easily perform simple LDAP queries',
       url='http://github.com/chaordic/python-ldap-simple-search',
       author='Raphael P. Ribeiro',
